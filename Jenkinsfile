@@ -10,10 +10,10 @@ node {
    stage('SonarQube analysis') {
     withSonarQubeEnv('SonarCloud') {
       // requires SonarQube Scanner for Maven 3.2+
-      sh 'mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar' +
-       '-Dsonar.projectKey=padmavathi:padmavathi' +
-       '-Dsonar.login=padmavathi' +
-       '-Dsonar.password=efaf4ed9c320f83fb061d004bf7f3addcf38c6f2' 
+      sh 'mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar ' +
+       ' -Dsonar.projectKey=padmavathi:padmavathi ' +
+       ' -Dsonar.login=padmavathi ' +
+       ' -Dsonar.password=efaf4ed9c320f83fb061d004bf7f3addcf38c6f2 ' 
           //'-Dsonar.language=java ' +
           //'-Dsonar.sources=. ' +
           //'-Dsonar.tests=. ' +
